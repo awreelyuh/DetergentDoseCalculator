@@ -10,9 +10,9 @@ namespace DetergentDoseCalculator
     {
         public string? Name { get; set; }
 
-        public float BaseDose { get; set; }
+        public string BaseDose { get; set; }
 
-        public Detergent(string? name, float baseDose)
+        public Detergent(string? name, string baseDose)
         {
             Name = name;
             BaseDose = baseDose;
@@ -20,7 +20,7 @@ namespace DetergentDoseCalculator
 
         public void Announce()
         {
-            Console.WriteLine("Based on a 7.5 kg washing machine capacity, you need " + BaseDose + " scoops/caps of " + Name + " for your main wash.");
+            Console.WriteLine("Based on a 7.5 kg washing machine capacity, you need " + BaseDose + " of " + Name + " for your main wash.");
         }
     }
 }

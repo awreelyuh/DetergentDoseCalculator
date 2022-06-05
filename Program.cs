@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("What is your water hardness level? (Soft/Med/Hard)");
+/* Console.WriteLine("What is your water hardness level? (Soft/Med/Hard)");
     string? hardness = Console.ReadLine();
     
     if (hardness == "Soft") // How to make these case insensitive?
@@ -29,3 +29,4 @@ if (Yes) // How to make this case insensitive?
 {
   
 } */
+DetergentDoseCalculator.Detergent.Announce("Biozet powder", "60 ml");
