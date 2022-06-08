@@ -10,17 +10,24 @@ namespace DetergentDoseCalculator
     {
         public string? Name { get; set; }
 
-        public string BaseDose { get; set; }
+        public string? BaseDose { get; set; }
 
         public Detergent(string? name, string baseDose)
         {
             Name = name;
             BaseDose = baseDose;
         }
-
-        public void Announce()
+        
+        public string Announce()
         {
-            Console.WriteLine("Based on a 7.5 kg washing machine capacity, you need " + BaseDose + " of " + Name + " for your main wash.");
+            if (Name != null)
+            {
+                Console.WriteLine("Based on a 7.5 kg washing machine capacity, you need " + BaseDose + " of " + Name + " for your main wash.");
+            }
+            else
+            {
+                Console.WriteLine("Please try again.");
+            }
         }
     }
 }
