@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DetergentDoseCalculator", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{42E0C310-A21A-478B-AE8D-EC739B4139B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetergentTest", "DetergentTest\DetergentTest.csproj", "{3B9B1A4E-FB2F-4D1A-8B96-CC91BB115ACC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DetergentTest", "DetergentTest\DetergentTest.csproj", "{3B9B1A4E-FB2F-4D1A-8B96-CC91BB115ACC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5E1578ED-A552-42E1-8BA0-3915C381B042}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
