@@ -25,5 +25,18 @@ namespace DetergentTest
             //-- Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void NameInvalid()
+        {
+            //-- Arrange
+            
+
+            //-- Act
+            
+
+            //-- Assert
+            //Assert.AreEqual(expected, actual);
+        }
     }
 }

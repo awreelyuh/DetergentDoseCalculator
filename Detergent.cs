@@ -12,6 +12,11 @@ namespace DetergentDoseCalculator
 
         public string BaseDose { get; set; }
 
+        public Detergent()
+        {
+
+        }
+
         public Detergent(string? name, string baseDose)
         {
             Name = name;
