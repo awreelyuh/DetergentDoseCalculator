@@ -1,21 +1,26 @@
 ﻿using System.Collections.Generic;
 using DetergentDoseCalculator;
 
-Detergent detergent = new Detergent();
-detergent.Name = "Radiant liquid";
-detergent.BaseDose = "1.5 caps";
+Console.WriteLine(DetergentRepository.GetDetergents());
 
 Console.WriteLine("What detergent do you want to use?");
-string? Name = Console.ReadLine(); // This becomes key to pull detergent from index?
+string? Name = Console.ReadLine().ToUpper(); // This becomes key to pull detergent from index?
 //How to get item from List<Detergent> via key?
+if (Name == null)
+{
+    Console.WriteLine("Invalid input. Please try again.");
+    Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no:");
+}
+/*else if (Name = )
+
 string BaseDose = "1.5 caps";
 
-Detergent.Announce(detergent.Name, detergent.BaseDose);
+Detergent.Announce(detergent.Name, detergent.BaseDose);*/
 
 Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no:");
 var isLarger = Console.ReadLine().ToUpper();
 
-if (isLarger == "Y")
+/*if (isLarger == "Y")
 {
     Console.WriteLine("What size is your washing machine?");
     double washerSize = Convert.ToDouble(Console.ReadLine());
@@ -30,4 +35,4 @@ else
     Console.WriteLine("Invalid input. Please try again.");
     Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no:");
     //Does it return to outside of if-else loop
-}
+}*/
