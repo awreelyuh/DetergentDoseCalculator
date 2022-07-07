@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DetergentDoseCalculator;
 
+Console.WriteLine("Here are some detergents we recommend:");
 Console.WriteLine(DetergentRepository.GetDetergents());
 
 Console.WriteLine("What detergent do you want to use?");
@@ -9,15 +10,18 @@ string? Name = Console.ReadLine().ToUpper(); // This becomes key to pull deterge
 if (Name == null)
 {
     Console.WriteLine("Invalid input. Please try again.");
-    Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no:");
+    Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no: ");
 }
-/*else if (Name = )
+else if (Console.ReadLine().ContainsKey(Name))
+{
+
+}
 
 string BaseDose = "1.5 caps";
 
-Detergent.Announce(detergent.Name, detergent.BaseDose);*/
+Detergent.Announce(detergent.Name, detergent.BaseDose);
 
-Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no:");
+Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no :");
 var isLarger = Console.ReadLine().ToUpper();
 
 /*if (isLarger == "Y")
@@ -33,6 +37,6 @@ else if (isLarger == "N")
 else
 {
     Console.WriteLine("Invalid input. Please try again.");
-    Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no:");
+    Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no :");
     //Does it return to outside of if-else loop
 }*/

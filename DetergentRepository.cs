@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DetergentDoseCalculator
+﻿namespace DetergentDoseCalculator
 {
     public class DetergentRepository
     {
@@ -17,10 +11,10 @@ namespace DetergentDoseCalculator
             detergents.Add("b clean co powder", "2 scoops");
             detergents.Add("Radiant liquid", "1.5 caps");
             detergents.Add("Kin Kin Naturals liquid", "90 ml (for hard water)");
-            
+
             foreach (KeyValuePair<string, string> kvp in detergents)
             {
-                Console.WriteLine("For {0}, use {1} of detergent for your main wash.",
+                Console.WriteLine("{0}",
                     kvp.Key, kvp.Value);
             }
 
