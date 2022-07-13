@@ -8,26 +8,23 @@ namespace DetergentDoseCalculator
 {
     public class Detergent
     {
-        public string? Name { get; set; }
+        public string Name { get; set; }
+        public string Consistency { get; set; }
 
-        public string BaseDose { get; set; }
-
-        public Detergent()
-        {
-
-        }
-
-        public Detergent(string? name, string baseDose)
+        public float BaseDose { get; set; }
+               
+        public Detergent(string name, string consistency, float baseDose)
         {
             Name = name;
+            Consistency = consistency;
             BaseDose = baseDose;
         }
                 
-        public static string Announce(string? Name, string BaseDose)
+        public static string Announce(string Name, string Consistency, float BaseDose)
         {
             if (Name != null)
             {
-                return "Based on a 7.5 kg washing machine capacity, you need " + BaseDose + " of " + Name + " for your main wash.";
+                return $"Based on a 7.5 kg washing machine capacity, you need {BaseDose} cap/scoop of {Name} {Consistency} for your main wash."; //TODO - Find out whether "cap/scoop" can change from singular to plural based on float >1
             }
             else
             {

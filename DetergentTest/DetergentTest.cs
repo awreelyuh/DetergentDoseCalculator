@@ -15,12 +15,12 @@ namespace DetergentTest
         public void NameValid()
         {
             //-- Arrange
-            Detergent detergent = new Detergent("Tide", "line 3");
+            Detergent detergent = new Detergent("Radiant", "liquid", 1.5f);
             //static string Announce();
-            string expected = "Based on a 7.5 kg washing machine capacity, you need line 3 of Tide for your main wash.";
+            string expected = "Based on a 7.5 kg washing machine capacity, you need 1.5 cap/scoop of Radiant liquid for your main wash.";
 
             //-- Act
-            string actual = Detergent.Announce("Tide", "line 3");
+            string actual = Detergent.Announce("Radiant", "liquid", 1.5f);
 
             //-- Assert
             Assert.AreEqual(expected, actual);
@@ -30,10 +30,10 @@ namespace DetergentTest
         public void NameInvalid()
         {
             //-- Arrange
-            
+
 
             //-- Act
-            
+
 
             //-- Assert
             //Assert.AreEqual(expected, actual);
