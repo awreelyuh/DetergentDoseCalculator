@@ -4,22 +4,33 @@ using DetergentDoseCalculator;
 Console.WriteLine("Here are some detergents we recommend:");
 Console.WriteLine(DetergentRepository.GetDetergents());
 Console.WriteLine();
-Console.WriteLine("Which detergent do you want to use?");
-string? Name = Console.ReadLine().ToUpper(); // This becomes key to pull detergent from index?
-//How to get item from List<Detergent> via key?
-if (Name == null)
-{
-    Console.WriteLine("Invalid input. Please try again.");
-    Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no: ");
-}
-//else if (Console.ReadLine().ContainsKey(Name))
-{
+Console.Write("Which detergent do you want to use? ");
+string userInput = Console.ReadLine().ToUpper();
 
+var det = DetergentRepository.ReadAllDetergents(); 
+
+bool detergentAvailable = det.ContainsKey(userInput);
+
+if (!detergentAvailable)
+{
+    Console.WriteLine($"Sorry, {userInput} is not on the list. Please try again.");
+    Console.Write("Which detergent do you want to use? ");
 }
+else
+{
+    // DetergentRepository.AnnounceDetails();
+}
+//if (userInput == null)
+//{
+//    Console.WriteLine("Invalid input. Please try again.");
+//    Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no: ");
+//}
+//else if (userInput.ContainsKey(detergent.Name))
+//{
+
+//}
 
 float BaseDose = 1.5f;
-
-//Detergent.Announce(detergent.Name, detergent.BaseDose);
 
 Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no: ");
 var isLarger = Console.ReadLine().ToUpper();

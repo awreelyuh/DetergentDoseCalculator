@@ -4,12 +4,12 @@
     {
         public static Dictionary<string, Detergent> GetDetergents()
         {
-            Detergent biozet = new Detergent("Biozet", "powder", 1.0f);
-            Detergent omoRegular = new Detergent("OMO Regular", "powder", 1.5f);
-            Detergent bCleanBaby = new Detergent("b clean Baby", "powder", 2.0f);
-            Detergent radiant = new Detergent("Radiant", "liquid", 1.5f);
-            Detergent persilUltimate = new Detergent("Persil Ultimate", "liquid", 1.0f);
-            Detergent almat = new Detergent("Almat Laundry", "liquid", 1.5f);
+            Detergent biozet = new Detergent("BIOZET", "powder", 1.0f);
+            Detergent omoRegular = new Detergent("OMO REGULAR", "powder", 1.5f);
+            Detergent bCleanBaby = new Detergent("B CLEAN BABY", "powder", 2.0f);
+            Detergent radiant = new Detergent("RADIANT", "liquid", 1.5f);
+            Detergent persilUltimate = new Detergent("PERSIL ULTIMATE", "liquid", 1.0f);
+            Detergent almat = new Detergent("ALMAT LAUNDRY", "liquid", 1.5f);
 
             var detergents = new Dictionary<string, Detergent>();
             detergents.Add(biozet.Name, biozet);
@@ -24,17 +24,20 @@
                 Console.WriteLine($"{detergent.Name} {detergent.Consistency}");
             }
 
-            //foreach (KeyValuePair<string, Detergent> kvp in detergents)
-            //{
-            //    Console.WriteLine("{0}",
-            //        kvp.Key, kvp.Value);
-            //}
-
             return detergents;
-
-
         }
 
+        public static Dictionary<string, Detergent> detergents;
+
+        public static Dictionary<string, Detergent> ReadAllDetergents()
+        {
+            return detergents;
+        }
+
+        public static string AnnounceDetails(Detergent detergent)
+        {
+            return $"Based on a 7.5 kg washing machine capacity, you need {detergent.BaseDose} cap / scoop of {detergent.Name} {detergent.Consistency} for your main wash.";
+        }
 
     }
 }
