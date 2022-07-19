@@ -2,35 +2,25 @@
 {
     public class DetergentRepository
     {
-        public static Dictionary<string, Detergent> GetDetergents()
+        public static Dictionary<string, Detergent> InitializeDetergents()
         {
-            Detergent biozet = new Detergent("BIOZET", "powder", 1.0f);
-            Detergent omoRegular = new Detergent("OMO REGULAR", "powder", 1.5f);
-            Detergent bCleanBaby = new Detergent("B CLEAN BABY", "powder", 2.0f);
-            Detergent radiant = new Detergent("RADIANT", "liquid", 1.5f);
-            Detergent persilUltimate = new Detergent("PERSIL ULTIMATE", "liquid", 1.0f);
-            Detergent almat = new Detergent("ALMAT LAUNDRY", "liquid", 1.5f);
+            Detergent biozet = new("Biozet", "powder", 1.0f);
+            Detergent omoRegular = new("OMO Regular", "powder", 1.5f);
+            Detergent bCleanBaby = new("b clean baby", "powder", 2.0f);
+            Detergent radiant = new("Radiant", "liquid", 1.5f);
+            Detergent persilUltimate = new("Persil Ultimate", "liquid", 1.0f);
+            Detergent almat = new("Almat Laundry", "liquid", 1.5f);
 
-            var detergents = new Dictionary<string, Detergent>();
-            detergents.Add(biozet.Name, biozet);
-            detergents.Add(omoRegular.Name, omoRegular);
-            detergents.Add(bCleanBaby.Name, bCleanBaby);
-            detergents.Add(radiant.Name, radiant);
-            detergents.Add(persilUltimate.Name, persilUltimate);
-            detergents.Add(almat.Name, almat);
-
-            foreach (var detergent in detergents.Values)
+            var detergents = new Dictionary<string, Detergent>
             {
-                Console.WriteLine($"{detergent.Name} {detergent.Consistency}");
-            }
+                { biozet.Name, biozet },
+                { omoRegular.Name, omoRegular },
+                { bCleanBaby.Name, bCleanBaby },
+                { radiant.Name, radiant },
+                { persilUltimate.Name, persilUltimate },
+                { almat.Name, almat }
+            };
 
-            return detergents;
-        }
-
-        public static Dictionary<string, Detergent> detergents;
-
-        public static Dictionary<string, Detergent> ReadAllDetergents()
-        {
             return detergents;
         }
 

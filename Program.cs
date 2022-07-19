@@ -1,38 +1,32 @@
-﻿using System.Collections.Generic;
-using DetergentDoseCalculator;
+﻿using DetergentDoseCalculator;
+
+var allDetergents = DetergentRepository.InitializeDetergents();
 
 Console.WriteLine("Here are some detergents we recommend:");
-Console.WriteLine(DetergentRepository.GetDetergents());
-Console.WriteLine();
-Console.Write("Which detergent do you want to use? ");
-string userInput = Console.ReadLine().ToUpper();
-
-var det = DetergentRepository.ReadAllDetergents(); 
-
-bool detergentAvailable = det.ContainsKey(userInput);
-
-if (!detergentAvailable)
+foreach (var detergent in allDetergents.Values)
 {
-    Console.WriteLine($"Sorry, {userInput} is not on the list. Please try again.");
-    Console.Write("Which detergent do you want to use? ");
+    Console.WriteLine($"{detergent.Name} {detergent.Consistency}");
+}
+
+Console.Write("\nWhich detergent do you want to use? ");
+string? userInput = Console.ReadLine();
+
+//userInput.ToUpper() == allDetergents.Keys.ToUpper();
+
+bool detergentAvailable = allDetergents.TryGetValue(userInput, out Detergent value);
+if (detergentAvailable)
+{
+    DetergentRepository.AnnounceDetails(value);
 }
 else
 {
-    // DetergentRepository.AnnounceDetails();
+    Console.WriteLine("Invalid input. Please try again.");
+    Console.Write("Which detergent do you want to use? ");
 }
-//if (userInput == null)
-//{
-//    Console.WriteLine("Invalid input. Please try again.");
-//    Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no: ");
-//}
-//else if (userInput.ContainsKey(detergent.Name))
-//{
-
-//}
 
 float BaseDose = 1.5f;
 
-Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no: ");
+Console.Write("\nIs your washer larger than 7.5 kg? \nEnter Y for yes or N for no: ");
 var isLarger = Console.ReadLine().ToUpper();
 
 if (isLarger == "Y")
@@ -44,10 +38,11 @@ if (isLarger == "Y")
 else if (isLarger == "N")
 {
     Console.WriteLine("You're good to go. Happy washing!");
+    Console.ReadLine();
 }
 else
 {
     Console.WriteLine("Invalid input. Please try again.");
-    Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no :");
+    Console.Write("Is your washer larger than 7.5 kg? \nEnter Y for yes or N for no: ");
     //Does it return to outside of if-else loop
 }
