@@ -11,18 +11,21 @@ foreach (var detergent in allDetergents.Values)
 Console.Write("\nWhich detergent do you want to use? ");
 string? userInput = Console.ReadLine();
 
-//userInput.ToUpper() == allDetergents.Keys.ToUpper();
+Detergent chosenDetergent = allDetergents[userInput];
 
-bool detergentAvailable = allDetergents.TryGetValue(userInput, out Detergent value);
-if (detergentAvailable)
-{
-    DetergentRepository.AnnounceDetails(value);
-}
-else
-{
-    Console.WriteLine("Invalid input. Please try again.");
-    Console.Write("Which detergent do you want to use? ");
-}
+//TODO - Figure out a `while` loop so user can continue trying to type correct option
+
+bool detergentAvailable = allDetergents.TryGetValue(userInput, out Detergent? detergent1);
+    if (detergentAvailable)
+    {
+        Console.WriteLine($"Based on a 7.5 kg washing machine capacity, you need {detergent1.BaseDose} cap / scoop of {detergent1.Name} {detergent1.Consistency} for your main wash."); ;
+    }
+    else
+    {
+        Console.WriteLine("Invalid input. Please try again.");
+        Console.Write("Which detergent do you want to use? ");
+    }
+
 
 float BaseDose = 1.5f;
 
@@ -37,7 +40,7 @@ if (isLarger == "Y")
 }
 else if (isLarger == "N")
 {
-    Console.WriteLine("You're good to go. Happy washing!");
+    Console.WriteLine("\nYou're good to go. Happy washing!");
     Console.ReadLine();
 }
 else

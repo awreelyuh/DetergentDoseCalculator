@@ -22,12 +22,6 @@
             };
 
             return detergents;
-        }
-
-        public static string AnnounceDetails(Detergent detergent)
-        {
-            return $"Based on a 7.5 kg washing machine capacity, you need {detergent.BaseDose} cap / scoop of {detergent.Name} {detergent.Consistency} for your main wash.";
-        }
-
+        }                
     }
 }

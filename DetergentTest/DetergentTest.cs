@@ -16,7 +16,6 @@ namespace DetergentTest
         {
             //-- Arrange
             Detergent detergent = new Detergent("Radiant", "liquid", 1.5f);
-            //static string Announce();
             string expected = "Based on a 7.5 kg washing machine capacity, you need 1.5 cap/scoop of Radiant liquid for your main wash.";
 
             //-- Act
@@ -24,19 +23,6 @@ namespace DetergentTest
 
             //-- Assert
             Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void NameInvalid()
-        {
-            //-- Arrange
-
-
-            //-- Act
-
-
-            //-- Assert
-            //Assert.AreEqual(expected, actual);
         }
     }
 }

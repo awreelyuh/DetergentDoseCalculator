@@ -19,7 +19,7 @@ namespace DetergentDoseCalculator
             Consistency = consistency;
             BaseDose = baseDose;
         }
-                
+
         public static string Announce(string Name, string Consistency, float BaseDose)
         {
             if (Name != null)
@@ -30,7 +30,7 @@ namespace DetergentDoseCalculator
             {
                 return "Please try again.";
             }
-                                          
+
         }
     }
 }
