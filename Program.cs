@@ -34,9 +34,12 @@ var isLarger = Console.ReadLine().ToUpper();
 
 if (isLarger == "Y")
 {
-    Console.WriteLine("What size is your washing machine?");
-    double washerSize = Convert.ToDouble(Console.ReadLine());
-    var detergentDose = BaseDose + (washerSize - 7.5);   //TODO - add 25% for each kg over; this is not right
+    Console.Write("How many kg is your washing machine capacity? ");
+    double washerCapacity = Convert.ToDouble(Console.ReadLine());
+    double increasedDetergentDose = (detergent1.BaseDose + ((washerCapacity - 7.5) * 0.25));   //TODO - add 25% for each kg over; this is not right
+    var finalDetergentDose = Math.Round(increasedDetergentDose, 2);
+    Console.WriteLine($"\nFor your {washerCapacity} kg washing machine, you need {finalDetergentDose} cap / scoop of {detergent1.Name} {detergent1.Consistency} for your main wash.");
+    Console.ReadLine();
 }
 else if (isLarger == "N")
 {

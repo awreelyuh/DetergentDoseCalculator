@@ -4,6 +4,7 @@
     {
         public static Dictionary<string, Detergent> InitializeDetergents()
         {
+            //Future TODO - Refigure dosage data to mls or grams instead of scoops or caps
             Detergent biozet = new("Biozet", "powder", 1.0f);
             Detergent omoRegular = new("OMO Regular", "powder", 1.5f);
             Detergent bCleanBaby = new("b clean baby", "powder", 2.0f);
