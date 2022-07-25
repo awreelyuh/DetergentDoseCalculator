@@ -1,4 +1,6 @@
 ﻿using DetergentDoseCalculator;
+using static DetergentDoseCalculator.Detergent;
+
 
 var allDetergents = DetergentRepository.InitializeDetergents();
 
@@ -8,21 +10,20 @@ foreach (var detergent in allDetergents.Values)
     Console.WriteLine($"{detergent.Name} ({detergent.Consistency})");
 }
 
-void giveDosageAdvice(Dictionary<string, Detergent> allDetergents)
-{
     Console.Write("\nWhich detergent do you want to use? ");
     string? userInput = Console.ReadLine();
 
-    Detergent chosenDetergent = allDetergents[userInput];
-    Detergent.Announce(chosenDetergent.Name, chosenDetergent.Consistency, chosenDetergent.BaseDose);
+    //Detergent chosenDetergent = allDetergents[userInput];
+    //Detergent.Announce(chosenDetergent.Name, chosenDetergent.Consistency, chosenDetergent.BaseDose);
 
     //TODO - Figure out a `while` loop so user can continue trying to type correct option
 
     bool detergentAvailable = allDetergents.TryGetValue(userInput, out Detergent? detergent1);
     if (detergentAvailable)
     {
-        Detergent.Announce(detergent1.Name, detergent1.Consistency, detergent1.BaseDose);
-        //Console.WriteLine($"Based on a 7.5 kg washing machine capacity, you need {detergent1.BaseDose} cap / scoop of {detergent1.Name} {detergent1.Consistency} for your main wash."); ;
+        Detergent.Announce(detergent1.Name, detergent1.Consistency, detergent1.BaseDose); 
+        //StandardDose.Announce(detergent1.Name);
+    //Console.WriteLine($"Based on a 7.5 kg washing machine capacity, you need {detergent1.BaseDose} cap / scoop of {detergent1.Name} {detergent1.Consistency} for your main wash."); ;
     }
     else
     {
@@ -54,6 +55,3 @@ void giveDosageAdvice(Dictionary<string, Detergent> allDetergents)
         Console.Write("Is your washer larger than 7.5 kg? Y/N: ");
         //Does it return to outside of if-else loop
     }
-}
-
-giveDosageAdvice(allDetergents);

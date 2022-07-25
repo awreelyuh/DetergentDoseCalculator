@@ -20,15 +20,16 @@ namespace DetergentDoseCalculator
             BaseDose = baseDose;
         }
 
-        public static string Announce(string Name, string Consistency, float BaseDose)
+        public static void Announce(string Name, string Consistency, float BaseDose)
         {
+            
             if (Name != null)
             {
-                return $"Based on a 7.5 kg washing machine capacity, you need {BaseDose} cap/scoop of {Name} {Consistency} for your main wash."; //TODO - Find out whether "cap/scoop" can change from singular to plural based on float >1
+                Console.WriteLine($"Based on a 7.5 kg washing machine capacity, you need {BaseDose} cap/scoop of {Name} {Consistency} for your main wash."); //TODO - Find out whether "cap/scoop" can change from singular to plural based on float >1
             }
             else
             {
-                return "Please try again.";
+                Console.WriteLine("Please try again.");
             }
 
         }
