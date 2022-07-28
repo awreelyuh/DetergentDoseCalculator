@@ -23,6 +23,15 @@
             };
 
             return detergents;
-        }                
+        }
+
+        public static string CalculateFinalDose(string Name, string Consistency, float BaseDose)
+        {
+            Console.Write("How many kg is your washing machine capacity? ");
+            double washerCapacity = Convert.ToDouble(Console.ReadLine());
+            double increasedDetergentDose = (BaseDose + ((washerCapacity - 7.5) * 0.25));
+            var finalDetergentDose = Math.Round(increasedDetergentDose, 2);
+            return "For your " + washerCapacity + " kg washing machine, you need " + finalDetergentDose + " caps/scoops of " + Name + " " + Consistency + " for your main wash.";
+        }
     }
 }

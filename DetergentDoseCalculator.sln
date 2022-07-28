@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetergentRepositoryTest", "DetergentRepositoryTest\DetergentRepositoryTest\DetergentRepositoryTest.csproj", "{940958A2-B01E-4424-8BCE-FE2EC02FFD19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,12 +30,17 @@ Global
 		{3B9B1A4E-FB2F-4D1A-8B96-CC91BB115ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B9B1A4E-FB2F-4D1A-8B96-CC91BB115ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B9B1A4E-FB2F-4D1A-8B96-CC91BB115ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{940958A2-B01E-4424-8BCE-FE2EC02FFD19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940958A2-B01E-4424-8BCE-FE2EC02FFD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940958A2-B01E-4424-8BCE-FE2EC02FFD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940958A2-B01E-4424-8BCE-FE2EC02FFD19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3B9B1A4E-FB2F-4D1A-8B96-CC91BB115ACC} = {42E0C310-A21A-478B-AE8D-EC739B4139B9}
+		{940958A2-B01E-4424-8BCE-FE2EC02FFD19} = {42E0C310-A21A-478B-AE8D-EC739B4139B9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {965DDA58-2892-4626-8CAB-CDD3D78E5578}
