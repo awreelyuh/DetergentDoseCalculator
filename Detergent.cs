@@ -23,7 +23,7 @@ namespace DetergentDoseCalculator
         public static string Announce(string Name, string Consistency, float BaseDose)
         {
             
-            if (Name != null)
+            if (Name != null || Name != String.Empty)
             {
                 //Future TODO - Find out whether "cap/scoop" can change from singular to plural depending on BaseDose
                 return $"Based on a 7.5 kg washing machine capacity, you need {BaseDose} cap/scoop of {Name} {Consistency} for your main wash."; 
