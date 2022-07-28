@@ -18,19 +18,5 @@ namespace DetergentDoseCalculatorTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
-
-        [TestMethod]
-        public void Announce_BlankUserInput_TryAgain()
-        {
-            //Arrange
-            var detergent = new Detergent("Radiant", "liquid", 1.5f);
-            string expected = "Please try again.";
-
-            //Act
-            string actual = Detergent.Announce("", "liquid", 1.5f);
-
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
     }
 }
