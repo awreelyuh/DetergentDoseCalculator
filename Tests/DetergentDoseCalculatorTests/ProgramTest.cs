@@ -13,7 +13,6 @@ namespace DetergentDoseCalculatorTests
             //Act
          
             //Assert
-            Assert.AreEqual(expected, actual);
         }
 
     }
