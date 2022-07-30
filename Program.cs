@@ -1,20 +1,8 @@
 ﻿using DetergentDoseCalculator;
 
-//TODO - Project Feature: "Implement a 'master loop' console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program"
+//Project Feature: "Implement a 'master loop' console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program"
 MainCalculate();
-
-Console.Write("Would you like to choose another detergent? Type Y to start over, or any other key to quit: ");
-string? startOver = Console.ReadLine().ToUpper();
-switch (startOver)
-{
-    case "Y":
-        Console.Clear();
-        MainCalculate();
-        break;
-    default:
-        Environment.Exit(0);
-        break;
-}
+ChooseActionAgain();
 
 static void MainCalculate()
 {
@@ -46,3 +34,19 @@ static void MainCalculate()
     WashingMachine.CheckWashingMachineSize(chosenDetergent);
 }
 
+static void ChooseActionAgain()
+{
+    Console.Write("Would you like to choose another detergent? Type Y to start over, or any other key to quit: ");
+    string? startOver = Console.ReadLine().ToUpper();
+    switch (startOver)
+    {
+        case "Y":
+            Console.Clear();
+            MainCalculate();
+            ChooseActionAgain();
+            break;
+        default:
+            Environment.Exit(0);
+            break;
+    }
+}
