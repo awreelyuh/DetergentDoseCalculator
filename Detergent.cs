@@ -34,12 +34,5 @@ namespace DetergentDoseCalculator
             }
 
         }
-
-        public static string? ChooseDetergent()
-        {
-            Console.Write("\nWhich detergent do you want to use? ");
-            string? userInput = Console.ReadLine();
-            return userInput;
-        }
     }
 }

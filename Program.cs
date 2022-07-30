@@ -14,8 +14,8 @@ static void MainCalculate()
         Console.WriteLine($"{detergent.Name} ({detergent.Consistency})");
     }
 
-    string? userInput = Detergent.ChooseDetergent();
-
+    Console.Write("\nWhich detergent do you want to use? ");
+    string? userInput = Console.ReadLine();
     bool detergentAvailable = allDetergents.TryGetValue(userInput, out Detergent? chosenDetergent);
 
     if (detergentAvailable)
