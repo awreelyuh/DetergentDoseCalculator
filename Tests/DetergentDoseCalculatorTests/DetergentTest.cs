@@ -6,6 +6,7 @@ namespace DetergentDoseCalculatorTests
     public class DetergentTest
     {
         [TestMethod]
+        //Project Feature: "Create 3 or more unit tests for your application" 1/3
         public void Announce_ValidUserInput_PrintsDefaultDoseStatement()
         {
             //Arrange

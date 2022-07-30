@@ -1,7 +1,20 @@
 ﻿using DetergentDoseCalculator;
 
-//TODO - For master loop, include option to quit as well as choose another detergent
+//TODO - Project Feature: "Implement a 'master loop' console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program"
 MainCalculate();
+
+Console.Write("Would you like to choose another detergent? Type Y to start over, or any other key to quit: ");
+string? startOver = Console.ReadLine().ToUpper();
+switch (startOver)
+{
+    case "Y":
+        Console.Clear();
+        MainCalculate();
+        break;
+    default:
+        Environment.Exit(0);
+        break;
+}
 
 static void MainCalculate()
 {
@@ -24,8 +37,9 @@ static void MainCalculate()
     }
     else
     {
-        Console.WriteLine("Invalid input. Please try again.");
-        Console.WriteLine();
+        Console.WriteLine("Invalid input. Press any key to try again.");
+        Console.ReadLine();
+        Console.Clear();
         MainCalculate();
     }
 

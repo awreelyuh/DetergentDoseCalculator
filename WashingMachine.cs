@@ -8,8 +8,6 @@ namespace DetergentDoseCalculator
 {
     public class WashingMachine
     {
-        public string MachineName { get; set; }
-        public bool MachineType { get; set; }
         public double MachineCapacity { get; set; }
 
         public static void CheckWashingMachineSize(Detergent? chosenDetergent)
@@ -19,6 +17,8 @@ namespace DetergentDoseCalculator
 
             if (isLarger == "Y")
             {
+                Console.Write("How many kg is your washing machine capacity? ");
+
                 string finalDoseStatement = DetergentRepository.CalculateFinalDose(chosenDetergent.Name, chosenDetergent.Consistency, chosenDetergent.BaseDose);
                 Console.WriteLine(finalDoseStatement);
                 Console.ReadLine();
