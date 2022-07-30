@@ -8,6 +8,7 @@ The plan is to eventually develop this into a full web app that can be used by s
 ## Features
 The following items from the "Feature List" are implemented:
 
+- Implement a "master loop" console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program
 - Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program
 - Build a conversion tool that converts user input to another type and displays it
 - Create 3 or more unit tests for your application

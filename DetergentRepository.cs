@@ -29,7 +29,7 @@
         //Project Feature: "Build a conversion tool that converts user input to another type and displays it"
         public static string CalculateFinalDose(string Name, string Consistency, float BaseDose)
         {
-            double machineCapacity = Convert.ToDouble(Console.ReadLine());
+            double machineCapacity = Convert.ToDouble(Console.ReadLine()); //TODO - Handle exception and create unit test for invalid input
             double increasedDetergentDose = ((BaseDose * 0.25) * (machineCapacity - 7.5) + BaseDose); //Detergent quantities are based on a 7.5 kg capacity washing machine. Increase main wash dose by 25% for each additional kg.
             var finalDetergentDose = Math.Round(increasedDetergentDose, 2);
             return "For your " + machineCapacity + " kg washing machine, you need " + finalDetergentDose + " caps/scoops of " + Name + " " + Consistency + " for your main wash.";
