@@ -26,5 +26,27 @@ namespace DetergentDoseCalculatorTests
             //var actual = stringWriter.ToString();
             Assert.AreEqual($"For your {machineCapacity} kg washing machine, you need 1.88 caps/scoops of Radiant liquid for your main wash.", actual);
         }
+
+        [TestMethod]
+        //Project Feature: "Create 3 or more unit tests for your application" 3/3
+        public void CalculateFinalDose_InvalidInputFormat_DisplaysExceptionMessage()
+        {
+            //Arrange
+            var detergentRepo = new DetergentRepository();
+            var machineCapacity = "test";
+
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            var stringReader = new StringReader(machineCapacity);
+            Console.SetIn(stringReader);
+
+            //Act
+            var actual = DetergentRepository.CalculateFinalDose("Radiant", "liquid", 1.5f);
+
+            //Assert
+            //var actual = stringWriter.ToString();
+            Assert.AreEqual($"For your {machineCapacity} kg washing machine, you need 1.88 caps/scoops of Radiant liquid for your main wash.", actual);
+        }
     }
 }

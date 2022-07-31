@@ -12,6 +12,7 @@ The following items from the "Feature List" are implemented:
 - Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program
 - Build a conversion tool that converts user input to another type and displays it
 - Create 3 or more unit tests for your application
+- Implement a log that records errors, invalid inputs, or other important events and writes them to a text file
 
 ## Notes & Instructions
 As the data used in this application is based on Australian and New Zealand products, the capacity of washing machines is in kilograms (instead of cubic feet) and the brand names of detergents may not be familiar to North American users.
