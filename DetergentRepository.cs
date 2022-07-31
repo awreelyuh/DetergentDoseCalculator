@@ -31,20 +31,19 @@
         {
             try
             {
-                double machineCapacity = Convert.ToDouble(Console.ReadLine()); //TODO - Create unit test for invalid input
+                double machineCapacity = Convert.ToDouble(Console.ReadLine());
 
                 if (machineCapacity > 7.5)
                 {
-                    double increasedDetergentDose = ((BaseDose * 0.25) * (machineCapacity - 7.5) + BaseDose); //Detergent quantities are based on a 7.5 kg capacity washing machine. Increase main wash dose by 25% for each additional kg.
+                    double increasedDetergentDose = ((BaseDose * 0.25) * (machineCapacity - 7.5) + BaseDose); //From CCN website: "Detergent quantities are based on a 7.5 kg capacity washing machine. Increase main wash dose by 25% for each additional kg."
                     var finalDetergentDose = Math.Round(increasedDetergentDose, 2);
                     return "For your " + machineCapacity + " kg washing machine, you need " + finalDetergentDose + " caps/scoops of " + Name + " " + Consistency + " for your main wash.";
                 }
                 else
                 {
-                    Console.WriteLine("Machine capacity needs to be greater than 7.5 kg.");                    
+                    return "Machine capacity needs to be greater than 7.5 kg.";                    
                 }
             }
-
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
@@ -60,8 +59,8 @@
 
                 string appendText = e.Message + e.StackTrace + Environment.NewLine;
                 File.AppendAllText(path, appendText);
-            }
-            return "Press ENTER to try again.";
+                return "Press ENTER to try again.";
+            }           
         }
     }
 }
