@@ -8,6 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Tests\DetergentDoseCalculatorTests\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Remove="Tests\DetergentDoseCalculatorTests\obj\Debug\net6.0\DetergentDoseCalculatorTests.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Tests\DetergentDoseCalculatorTests\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\DetergentDoseCalculatorTests\obj\Debug\net6.0\DetergentDoseCalculatorTests.AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.TestPlatform" Version="17.2.0" />
     <PackageReference Include="Microsoft.UnitTestFramework.Extensions" Version="2.0.0" />
   </ItemGroup>
